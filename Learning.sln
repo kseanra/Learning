@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning", "Learning.csproj", "{9666E3A6-6D8A-4836-9936-FAAC9D970EF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPattens", "DesignPattens", "{54203881-FD5D-4B85-9686-40C001EA111A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", "{98981F9E-0ED2-4EEC-A36D-46E46B9FDD18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9666E3A6-6D8A-4836-9936-FAAC9D970EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9666E3A6-6D8A-4836-9936-FAAC9D970EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9666E3A6-6D8A-4836-9936-FAAC9D970EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9666E3A6-6D8A-4836-9936-FAAC9D970EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98981F9E-0ED2-4EEC-A36D-46E46B9FDD18} = {54203881-FD5D-4B85-9686-40C001EA111A}
+	EndGlobalSection
+EndGlobal

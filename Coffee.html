@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<script>
+    function makeCoffee(coffeeVol, waterVol) {
+        const coffee = document.getElementById("coffee");
+        coffee.style.height = `${coffeeVol + 10}px`; // must include units (px, %, em, etc.)
+        const water = document.getElementById("water");
+        water.style.height = `${waterVol + coffeeVol + 20}px`;// must include units (px, %, em, etc.)
+    }
+</script>
+<div class="cup" >
+    <div class="cup-body">
+        <div class="layer coffee" id="coffee" style="height: 30px">1</div>
+        <div class="layer water" id="water" style="height: 30px">2</div>
+    </div>
+</div>
+<div class="circle">
+    <div style="--i:0" id="c1" onclick="makeCoffee(10, 20)">Coffee 1</div>
+    <div style="--i:1" id="c2" onclick="makeCoffee(12, 22)">Coffee 2</div>
+    <div style="--i:2" id="c3" onclick="makeCoffee(14, 23)">Coffee 3</div>
+    <div style="--i:3" id="c4" onclick="makeCoffee(16, 26)">Coffee 4</div>
+    <div style="--i:4" id="c5" onclick="makeCoffee(18, 28)">Coffee 5</div>
+    <div style="--i:5" id="c6" onclick="makeCoffee(20, 30)">Coffee 6</div>
+    <div style="--i:6" id="c7" onclick="makeCoffee(22, 32)">Coffee 7</div>
+    <div style="--i:7" id="c8" onclick="makeCoffee(24, 34)">Coffee 8</div>
+    <div style="--i:8" id="c9" onclick="makeCoffee(26, 36)">Coffee 9</div>
+    <div style="--i:9" id="c10" onclick="makeCoffee(28, 38)">Coffee 10</div>
+    <div style="--i:10" id="c11" onclick="makeCoffee(30, 40)">Coffee 11</div>
+    <div style="--i:11" id="c12" onclick="makeCoffee(32, 42)">Coffee 12</div>
+</div>
+</body>
+</html>

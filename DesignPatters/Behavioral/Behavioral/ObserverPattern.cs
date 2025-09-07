@@ -1,4 +1,5 @@
-// Use case: Apply the Observer pattern when you want to notify multiple objects about state changes, such as event handling systems.
+// Use case: Apply the Observer pattern when you want to notify multiple objects about state changes, 
+//such as event handling systems.
 using System;
 public interface IObserverPattern { void RunExample(); }
 public class ObserverPattern : IObserverPattern {

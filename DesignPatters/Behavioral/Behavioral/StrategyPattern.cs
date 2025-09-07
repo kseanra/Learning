@@ -1,4 +1,5 @@
-// Use case: Apply the Strategy pattern when you want to define a family of algorithms, encapsulate each one, and make them interchangeable.
+// Use case: Apply the Strategy pattern when you want to define a family of algorithms, 
+//encapsulate each one, and make them interchangeable.
 using System;
 public interface IStrategyPattern { void RunExample(); }
 public class StrategyPattern : IStrategyPattern {

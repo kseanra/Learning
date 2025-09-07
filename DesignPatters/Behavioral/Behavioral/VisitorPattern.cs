@@ -1,4 +1,5 @@
-// Use case: Apply the Visitor pattern when you want to perform operations on elements of an object structure without changing their classes.
+// Use case: Apply the Visitor pattern when you want to perform operations on elements of an object 
+//structure without changing their classes.
 using System;
 public interface IVisitorPattern { void RunExample(); }
 public class VisitorPattern : IVisitorPattern {

@@ -1,4 +1,5 @@
-// Use case: Apply the Interpreter pattern when you need to evaluate sentences in a language, such as parsing expressions or commands.
+// Use case: Apply the Interpreter pattern when you need to evaluate sentences in a language,
+// such as parsing expressions or commands.
 using System;
 public interface IInterpreterPattern { void RunExample(); }
 public class InterpreterPattern : IInterpreterPattern {

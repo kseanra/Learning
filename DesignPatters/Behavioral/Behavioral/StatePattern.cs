@@ -2,19 +2,39 @@
 using System;
 public interface IStatePattern { void RunExample(); }
 public class StatePattern : IStatePattern {
-    public void RunExample() {
+    public void RunExample()
+    {
         Console.WriteLine("State Pattern Example:");
-        var context = new Context(new ConcreteStateA());
-        context.Request();
-        context.SetState(new ConcreteStateB());
-        context.Request();
+        var context = new Context(new Red());
+        context.Change();
+        context.Change();
+        context.Change();
     }
-    interface IState { void Handle(Context context); }
-    class ConcreteStateA : IState { public void Handle(Context context) { Console.WriteLine("StateA handling"); } }
-    class ConcreteStateB : IState { public void Handle(Context context) { Console.WriteLine("StateB handling"); } }
-    class Context {
-        private IState _state;
-        public Context(IState state) { _state = state; }
+    interface ITrafficLightState { void Change(Context context); }
+    class Red : ITrafficLightState {
+        public void Change(Context context) {
+            Console.WriteLine("Red -> Yellow");
+            context.SetState(new Yellow());
+        }
+    }
+    class Yellow : ITrafficLightState {
+        public void Change(Context context) {
+            Console.WriteLine("Yellow -> Green");   
+            context.SetState(new Green());
+        }
+    }
+
+    class Green : ITrafficLightState {
+        public void Change(Context context) {
+            Console.WriteLine("Green -> Red");
+            context.SetState(new Red());//
+        }
+    }
+
+    class Context
+    {
+        private ITrafficLightState _state;
+        public Context(ITrafficLightState state) { _state = state; }
         public void SetState(IState state) { _state = state; }
         public void Request() { _state.Handle(this); }
     }

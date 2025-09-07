@@ -1,4 +1,5 @@
-// Use case: Apply the Command pattern when you want to encapsulate a request as an object, allowing for parameterization, queuing, and undo/redo operations.
+// Use case: Apply the Command pattern when you want to encapsulate a request as an object, 
+//allowing for parameterization, queuing, and undo/redo operations.
 using System;
 public interface ICommandPattern { void RunExample(); }
 public class CommandPattern : ICommandPattern {

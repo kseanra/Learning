@@ -1,4 +1,5 @@
-// Use case: Apply the Mediator pattern when you want to reduce coupling between components by having them communicate through a central mediator.
+// Use case: Apply the Mediator pattern when you want to reduce coupling between components by having 
+//them communicate through a central mediator.
 using System;
 public interface IMediatorPattern { void RunExample(); }
 public class MediatorPattern : IMediatorPattern {

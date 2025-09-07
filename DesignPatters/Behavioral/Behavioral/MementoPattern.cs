@@ -1,4 +1,5 @@
-// Use case: Apply the Memento pattern when you need to capture and restore an object's state, such as implementing undo functionality.
+// Use case: Apply the Memento pattern when you need to capture and restore an object's state, 
+//such as implementing undo functionality.
 using System;
 public interface IMementoPattern { void RunExample(); }
 public class MementoPattern : IMementoPattern {

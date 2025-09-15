@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Algorithms",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet: build",
+            "program": "${workspaceFolder}/Algorithms/bin/Debug/net8.0/Learning.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Algorithms",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}

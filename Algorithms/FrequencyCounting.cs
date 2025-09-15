@@ -1,3 +1,5 @@
+using System.Net.NetworkInformation;
+
 namespace MyApp;
 
 public class FrequencyCounting
@@ -19,7 +21,7 @@ public class FrequencyCounting
             .Select(x => x.Key)
             .ToArray();
     }
-    
+
     public static IList<IList<string>> GroupAnagrams(string[] strs)
     {
         var map = new Dictionary<string, List<string>>();
@@ -39,7 +41,7 @@ public class FrequencyCounting
 
         return map.Values.ToList<IList<string>>();
     }
-    
+
     //Remove Duplicates (from Sorted Array)
     public static int RemoveDuplicates(int[] nums)
     {
@@ -56,12 +58,12 @@ public class FrequencyCounting
         }
         return i + 1; // length of unique elements
     }
-    
+
     public static int LongestConsecutive(int[] nums)
     {
         var set = new HashSet<int>(nums);
         int longest = 0;
-
+    
         foreach (int num in set)
         {
             // Only start from sequence beginning
@@ -87,12 +89,14 @@ public class FrequencyCounting
         int left = 0, maxLen = 0;
         var map = new Dictionary<char, int>();
 
-        for (int right = 0; right < s.Length; right++) {
+        for (int right = 0; right < s.Length; right++)
+        {
             char r = s[right];
             if (!map.ContainsKey(r)) map[r] = 0;
             map[r]++;
-            
-            while (map.Count > k) {
+
+            while (map.Count > k)
+            {
                 char l = s[left];
                 map[l]--;
                 if (map[l] == 0)
@@ -107,4 +111,41 @@ public class FrequencyCounting
 
         return maxLen;
     }
+
+    public static int MinCoinDP(int[] coins, int amount)
+    {
+        int max = amount + 1;
+        int[] dp = new int[amount + 1];
+        Array.Fill(dp, max);
+        dp[0] = 0;
+
+        foreach (var coin in coins)
+        {
+            for (int i = coin; i <= amount; i++)
+            {
+               dp[i] = Math.Min(dp[i], dp[i - coin] + 1);
+
+                Console.WriteLine($"Amount: {i}, Coin: {coin}, DP: {string.Join(",", dp)}");
+            }
+        }
+
+        return dp[amount] > amount ? -1 : dp[amount];
+    }
+
+    public static int[] Sorting(int[] nums)
+    {
+        return nums.OrderBy(n => n).ToArray();
+    }
+
+    public static User[] Sorting2(User[] users)
+    {
+        Array.Sort(users, (x, y) => x?.Name?.CompareTo(y.Name) ?? 0);
+        return users;
+    }
+}
+
+public class User
+{
+    public string? Name { get; set; }
+    public int Age { get; set; }
 }

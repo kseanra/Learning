@@ -49,7 +49,6 @@ public class LongestSubstring
     public string LongestSubstringBruteForce2()
     {
         var finalList = new List<string>();
-        string mexLength = "";
         for (int i = 0; i < this._input.Length; i++)
         {
             for (int j = i + 1; j < this._input.Length; j++)
@@ -97,13 +96,32 @@ public class LongestSubstring
 
         return maxLen;
     }
+    
+    public int LengthOfLongestSubstring(string s)
+    {
+        var set = new HashSet<char>();
+        int left = 0, maxLength = 0;
+
+        for (int right = 0; right < s.Length; right++)
+        {
+            while (set.Contains(s[right]))
+            {
+                set.Remove(s[left]);
+                left++;
+            }
+            set.Add(s[right]);
+            maxLength = Math.Max(maxLength, right - left + 1);
+        }
+        return maxLength;
+    }
+
 
     private bool IsCharUniq(string substring)
     {
         HashSet<char> set = new HashSet<char>();
         foreach (var ch in substring)
         {
-            if(!set.Add(ch)) return false;
+            if (!set.Add(ch)) return false;
         }
 
         return true;

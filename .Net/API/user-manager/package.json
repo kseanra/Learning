@@ -1,0 +1,17 @@
+{
+  "name": "user-manager-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack User Manager application with ASP.NET Core and React TypeScript",
+  "scripts": {
+    "start:api": "dotnet run",
+    "start:frontend": "cd frontend && npm start",
+    "build:api": "dotnet build",
+    "build:frontend": "cd frontend && npm run build",
+    "install:frontend": "cd frontend && npm install",
+    "dev": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
+    "build": "npm run build:api && npm run build:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
